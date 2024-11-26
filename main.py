@@ -3,10 +3,8 @@ import prices
 
 from phrases import client
 
-print(f"Вітаємо у ресторані \"Дача\", {client}!")
-
 borsch = input('Скільки тарілок борщу ви хочете?:>> ').strip()
-borsch_quantity = float(borsch)
+borsch_quantity = int(borsch)
 borsch_price = 50
 total_borsch = borsch_quantity * borsch_price
 
@@ -21,12 +19,12 @@ cutlets_price = 70
 total_cutlets = cutlets_quantity * cutlets_price
 
 salad = input('Скільки порцій салату ви хочете?:>> ').strip()
-salad_quantity = float(salad)
+salad_quantity = int(salad)
 salad_price = 40
 total_salad = salad_quantity * salad_price
 
 compote = input('Скільки чашок компоту ви хочете?:>> ').strip()
-compote_quantity = float(compote)
+compote_quantity = int(compote)
 compote_price = 20
 total_compote = compote_quantity * compote_price
 
@@ -44,8 +42,16 @@ without_discount = total_borsch + total_dumplings + total_cutlets + total_salad 
 discount = without_discount * discount_think
 total_discount = without_discount - discount
 
-print('today is special 15% discount!!')
-print(without_discount)
-print(total_discount)
+print('Сьогодні діє спеціальна знижка 15%!!')
+print(f"Клієнт: {client}")
+print(f"Борщ: {borsch_quantity} тарілок x {borsch_price} грн/тарілка = {total_borsch} грн")
+print(f"Вареники: {dumplings_quantity} порцій x {dumplings_price} грн/порція = {total_dumplings} грн")
+print(f"Котлети: {cutlets_quantity} порцій x {cutlets_price} грн/порція = {total_cutlets} грн")
+print(f"Салат: {salad_quantity} порцій x {salad_price} грн/порція = {total_salad} грн")
+print(f"Компот: {compote_quantity} чашок x {compote_price} грн/чашка = {total_compote} грн")
+
+print(f"\nЗагальна вартість без знижки: {without_discount:.2f} грн")
+print(f"Знижка 15%: -{discount:.2f} грн")
+print(f"Фінальна вартість: {total_discount:.2f} грн")
 print(receipt)
 print(random)
