@@ -1,12 +1,13 @@
 import phrases
 import prices
 
+
+from prices import menu
 from phrases import client
 
 borsch = input('Скільки тарілок борщу ви хочете?:>> ').strip()
 borsch_quantity = int(borsch)
-borsch_price = 50
-total_borsch = borsch_quantity * borsch_price
+total_borsch = borsch_quantity * menu['Борщ']
 
 dumplings = input('Скільки порцій вареників ви хочете?:>> ').strip()
 dumplings_quantity = int(dumplings)
