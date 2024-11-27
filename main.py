@@ -11,23 +11,19 @@ total_borsch = borsch_quantity * menu['Борщ']
 
 dumplings = input('Скільки порцій вареників ви хочете?:>> ').strip()
 dumplings_quantity = int(dumplings)
-dumplings_price = 60
-total_dumplings = dumplings_quantity * dumplings_price
+total_dumplings = dumplings_quantity * menu['Вареники']
 
 cutlets = input('Скільки порцій котлет ви хочете?:>> ').strip()
 cutlets_quantity = int(cutlets)
-cutlets_price = 70
-total_cutlets = cutlets_quantity * cutlets_price
+total_cutlets = cutlets_quantity * menu['Котлети']
 
 salad = input('Скільки порцій салату ви хочете?:>> ').strip()
 salad_quantity = int(salad)
-salad_price = 40
-total_salad = salad_quantity * salad_price
+total_salad = salad_quantity * menu['Салат']
 
 compote = input('Скільки чашок компоту ви хочете?:>> ').strip()
 compote_quantity = int(compote)
-compote_price = 20
-total_compote = compote_quantity * compote_price
+total_compote = compote_quantity * menu['Компот']
 
 discount = 0.15
 
@@ -45,11 +41,11 @@ total_discount = without_discount - discount
 
 print('Сьогодні діє спеціальна знижка 15%!!')
 print(f"Клієнт: {client}")
-print(f"Борщ: {borsch_quantity} тарілок x {borsch_price} грн/тарілка = {total_borsch} грн")
-print(f"Вареники: {dumplings_quantity} порцій x {dumplings_price} грн/порція = {total_dumplings} грн")
-print(f"Котлети: {cutlets_quantity} порцій x {cutlets_price} грн/порція = {total_cutlets} грн")
-print(f"Салат: {salad_quantity} порцій x {salad_price} грн/порція = {total_salad} грн")
-print(f"Компот: {compote_quantity} чашок x {compote_price} грн/чашка = {total_compote} грн")
+print(f"Борщ: {borsch_quantity} тарілок x {menu['Борщ']} грн/тарілка = {total_borsch} грн")
+print(f"Вареники: {dumplings_quantity} порцій x {menu['Вареники']} грн/порція = {total_dumplings} грн")
+print(f"Котлети: {cutlets_quantity} порцій x {menu['Котлети']} грн/порція = {total_cutlets} грн")
+print(f"Салат: {salad_quantity} порцій x {menu['Салат']} грн/порція = {total_salad} грн")
+print(f"Компот: {compote_quantity} чашок x {menu['Компот']} грн/чашка = {total_compote} грн")
 
 print(f"\nЗагальна вартість без знижки: {without_discount:.2f} грн")
 print(f"Знижка 15%: -{discount:.2f} грн")
